@@ -1,0 +1,16 @@
+name: pong
+version: 0.1.0
+digest: <will be filled with a repoDigest>
+registry: 10.20.30.11:8080
+context: cyan
+filters:
+  # https://knative.dev/docs/eventing/features/new-apiserversource-filters/
+  - all:
+      - exact:
+          type: 'iodocument'
+      - prefix:
+          subject: '#ping'
+run:
+  envs: 
+    - name: LOG_LEVEL
+      value: INFO
