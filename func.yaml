@@ -7,6 +7,8 @@ filters:
   - all:
       - exact:
           type: org.mindwm.v1.iodocument
+      - prefix:
+          subject: '#ping'
 run:
   envs:
     - name: CONTEXT_NAME
