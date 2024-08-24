@@ -107,15 +107,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1724253542,
-        "narHash": "sha256-qcyhQzqhz5by4EbmkEsFl0kf2Z2UBnoFXJAlrx3lRsU=",
+        "lastModified": 1724423419,
+        "narHash": "sha256-9D7M08qEXmUYBFKLtcEGPiNGyXe2YU38nMFXkra/O0Y=",
         "owner": "mindwm",
         "repo": "mindwm-sdk-python-ng",
-        "rev": "44a61011eb44d0ba7de2f7e29115b85e76588655",
+        "rev": "834465c3257aa192895c3b1eee788792c6e7b53c",
         "type": "github"
       },
       "original": {
         "owner": "mindwm",
+        "ref": "feat/new_events_model",
         "repo": "mindwm-sdk-python-ng",
         "type": "github"
       }

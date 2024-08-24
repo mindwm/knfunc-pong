@@ -13,7 +13,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/24.05";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    mindwm-sdk-python.url = "github:mindwm/mindwm-sdk-python-ng";
+    mindwm-sdk-python.url = "github:mindwm/mindwm-sdk-python-ng/?ref=feat/new_events_model";
     mindwm-sdk-python.inputs.nixpkgs.follows = "nixpkgs";
     devshell.url = "github:numtide/devshell/main";
     devshell.inputs.nixpkgs.follows = "nixpkgs";
