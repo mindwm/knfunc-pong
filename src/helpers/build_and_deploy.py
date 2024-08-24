@@ -101,8 +101,8 @@ def render_trigger(params: Params):
 
     y['metadata']['name'] = f"{params.name}-trigger"
     y['metadata']['namespace'] = f"context-{params.context}"
-    y['spec']['broker'] = f"context-broker-{params.context}"
-    y['spec']['delivery']['deadLetterSink']['ref']['name'] = f"context-broker-{params.context}-dead-letter"
+    y['spec']['broker'] = f"context-broker"
+    y['spec']['delivery']['deadLetterSink']['ref']['name'] = f"dead-letter"
     y['spec']['delivery']['deadLetterSink']['ref']['namespace'] = f"context-{params.context}"
     y['spec']['filters'] = params.filters
     y['spec']['subscriber']['ref']['name'] = params.name
