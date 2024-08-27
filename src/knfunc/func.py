@@ -9,6 +9,6 @@ logger = logging.getLogger(__name__)
 @event
 async def pong(ev: IoDocument):
     logger.info(f"req: {ev}")
-    reply = Pong(uuid=uuid4().hex)
+    reply = Pong(uuid=ev.uuid)
     logger.info(f"reply with: {reply}")
     return reply
