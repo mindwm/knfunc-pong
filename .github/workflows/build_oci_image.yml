@@ -13,6 +13,6 @@ on:
     - master
 jobs:
   build_and_push:
-    uses: mindwm/github-workflows/.github/workflows/build_oci_image.yml@v1.0.1
+    uses: mindwm/github-workflows/.github/workflows/build_oci_image.yml@v1.0.2
     secrets:
       REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
