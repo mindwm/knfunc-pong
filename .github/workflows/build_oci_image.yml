@@ -14,3 +14,5 @@ on:
 jobs:
   build_and_push:
     uses: mindwm/github-workflows/.github/workflows/build_oci_image.yml@v1.0.1
+    secrets:
+      REGISTRY_TOKEN: ${{ secrets.REGISTRY_TOKEN }}
