@@ -1,6 +1,6 @@
 name: pong
-version: 0.1.0
-digest: sha256:3cd5e9e8f8558964b028d1a85865fba44b4973661ebc0c96cefea1154245847f
+version: 1.0.0
+digest: sha256:20366a4df118d9951ac642d9c581a1b7a2841ad45db2601c7de38c2eed8de4b4
 registry: 10.20.30.11:8080
 context: cyan
 filters:
