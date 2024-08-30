@@ -30,18 +30,20 @@ jobs:
     - name: Login to repository
       run: |
         echo ${{ secrets.REGISTRY_TOKEN }} | skopeo login -u metacoma --password-stdin ghcr.io
-    - name: Determine image pag
-      uses: haya14busa/action-cond@v1
-      id: imageTag
+    - name: Docker meta
+      id: meta
+      uses: docker/metadata-action@v5
       with:
-        cond: ${{ github.event_name != 'pull_request' }}
-        if_true: 'latest'
-        if_false: 'pr${{ github.event.number }}'
-    - name: get image name
-      run: echo "IMAGE=${{ vars.DEST_REGISTRY }}/${{ github.event.repository.name }}:${{ steps.imageTag.outputs.value }}"
+        images: ${{ vars.DEST_REGISTRY }}/${{ github.event.repository.name }}
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
+        flavor:
+          latest=false   
     - name: Push image
       run: |
         skopeo --version
         skopeo copy \
         docker-archive:./result \
-        docker://${{ vars.DEST_REGISTRY }}/${{ github.event.repository.name }}:${{ steps.imageTag.outputs.value }}
+        docker://${{ vars.DEST_REGISTRY }}/${{ github.event.repository.name }}:${{ steps.meta.outputs.tags }}
