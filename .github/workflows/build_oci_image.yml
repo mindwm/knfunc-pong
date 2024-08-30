@@ -13,4 +13,4 @@ on:
     - master
 jobs:
   build_and_push:
-    uses: mindwm/github-workflows/build_oci_image.yml@v1.0.0
+    uses: mindwm/github-workflows/.github/workflows/build_oci_image.yml@v1.0.1
